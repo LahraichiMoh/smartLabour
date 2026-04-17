@@ -20,3 +20,20 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+node_modules/
+client/node_modules/
+
+dist/
+client/dist/
+.vite/
+
+.env
+.env.*
+
+.DS_Store
+
+coverage/
+*.tsbuildinfo
+
+.manus-logs/
