@@ -288,53 +288,74 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="relative h-56 sm:h-64 md:h-80 lg:h-96"
+              className="relative"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <motion.div
-                className="absolute -inset-2 bg-gradient-to-br from-[#003366]/20 via-[#0099CC]/20 to-[#CCFF00]/15 rounded-3xl blur-2xl"
-                animate={{ opacity: [0.6, 0.9, 0.6] }}
-                transition={{ duration: 6, repeat: Infinity }}
-              />
-              <div className="absolute inset-0 rounded-2xl md:rounded-3xl ring-1 ring-[#0099CC]/20" />
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663231017387/ALETnczSC3E4RfYkCQaNAC/hero-geometric-abstract-TjzXLeTy3wYcAy8JQykfBc.webp"
-                alt="Geometric abstract background"
-                className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-lg md:shadow-2xl"
-              />
-              <div className="absolute inset-x-3 sm:inset-x-4 bottom-3 sm:bottom-4 grid grid-cols-2 gap-2">
-                {[
-                  { icon: IconTrading, label: "Négoce général" },
-                  { icon: IconCustom, label: "Prestations sur mesure" },
-                  { icon: IconConstruction, label: "Travaux & construction" },
-                  { icon: IconRecruitment, label: "Recrutement" },
-                ].map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-2 rounded-xl bg-white/70 backdrop-blur-md border border-white/40 px-3 py-2 ring-1 ring-[#0099CC]/10"
-                    >
-                      <Icon className="w-5 h-5 text-[#003366] stroke-current" />
-                      <div className="text-[11px] sm:text-xs font-semibold text-[#003366] leading-tight">
-                        {item.label}
-                      </div>
+              <div className="relative mx-auto w-full max-w-[680px]">
+                <motion.div
+                  className="pointer-events-none absolute -inset-8 bg-gradient-to-br from-[#003366]/14 via-[#0099CC]/16 to-[#CCFF00]/10 rounded-[48px] blur-3xl"
+                  animate={{ opacity: [0.55, 0.9, 0.55] }}
+                  transition={{ duration: 7, repeat: Infinity }}
+                />
+
+                <div className="pointer-events-none absolute -right-24 -top-20 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-[#0099CC]/18 blur-3xl" />
+                <div className="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-[#CCFF00]/16 blur-3xl" />
+
+                <div
+                  className="pointer-events-none absolute -right-10 top-16 h-40 w-40 opacity-35"
+                  style={{
+                    backgroundImage: "radial-gradient(rgba(0,153,204,0.55) 1.4px, transparent 1.4px)",
+                    backgroundSize: "12px 12px",
+                    borderRadius: 9999,
+                  }}
+                />
+
+                <motion.div
+                  className="relative w-full overflow-hidden rounded-3xl bg-white/50 backdrop-blur-md ring-1 ring-[#0099CC]/15 shadow-2xl shadow-[#003366]/10"
+                  whileHover={{ y: -4 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                >
+                  <div className="relative aspect-[16/11] sm:aspect-[4/3] lg:aspect-[16/11]">
+                    <img
+                      src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=2000&q=75"
+                      alt="Ville et entreprises"
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/45 via-[#003366]/10 to-transparent" />
+
+                    <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur-md border border-white/40 px-3 py-2 ring-1 ring-[#0099CC]/10">
+                      <span className="h-2 w-2 rounded-full bg-[#CCFF00]" />
+                      <span className="text-xs font-semibold text-[#003366]">Solutions multisectorielles</span>
                     </div>
-                  );
-                })}
+
+                    <div className="absolute inset-x-4 bottom-4 grid grid-cols-2 gap-2">
+                      {[
+                        { icon: IconTrading, label: "Négoce" },
+                        { icon: IconCustom, label: "Services" },
+                        { icon: IconConstruction, label: "Construction" },
+                        { icon: IconRecruitment, label: "Recrutement" },
+                      ].map((item) => {
+                        const Icon = item.icon;
+                        return (
+                          <div
+                            key={item.label}
+                            className="flex items-center gap-2 rounded-2xl bg-white/70 backdrop-blur-md border border-white/40 px-3 py-2 ring-1 ring-[#0099CC]/10"
+                          >
+                            <Icon className="w-5 h-5 text-[#003366] stroke-current" />
+                            <div className="text-[11px] sm:text-xs font-semibold text-[#003366] leading-tight">
+                              {item.label}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </motion.div>
               </div>
-              <motion.div
-                className="absolute -top-4 -left-4 h-10 w-10 rounded-full bg-[#CCFF00]/50 blur-sm"
-                animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.9, 0.5] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -right-4 h-14 w-14 rounded-full bg-[#0099CC]/35 blur-sm"
-                animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.85, 0.5] }}
-                transition={{ duration: 5, repeat: Infinity }}
-              />
             </motion.div>
           </div>
 
@@ -374,7 +395,7 @@ export default function Home() {
                 À propos de <span className="text-[#003366]">Smart Labour</span>
               </h2>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                Une expertise reconnue au service de votre réussite depuis plus de 7 ans.
+                Une expertise reconnue au service de votre réussite depuis plus de 4 ans.
               </p>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Smart Labour s'impose comme un partenaire de confiance dans quatre domaines d'excellence : le négoce général, les prestations de services diversifiées, les travaux de construction et l'intérim-recrutement.
@@ -787,17 +808,17 @@ export default function Home() {
                 {
                   icon: IconMail,
                   label: "Email",
-                  value: "info.smartlabour@gmail.com",
+                  value: "smartlabour@gmail.com",
                 },
                 {
                   icon: IconPhone,
                   label: "Téléphone",
-                  value: "+212 660 63 71 37",
+                  value: "+212 660 60 60 60",
                 },
                 {
                   icon: IconMapPin,
                   label: "Adresse",
-                  value: "Casablanca, Maroc",
+                  value: "17 place Charles Nicolle res Pasteur Build Etg 7 Apt 2, Casablanca, Maroc",
                 },
               ].map((item, idx) => {
                 const Icon = item.icon;
