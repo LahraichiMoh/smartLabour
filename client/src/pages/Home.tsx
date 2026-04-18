@@ -811,12 +811,12 @@ export default function Home() {
                 {
                   icon: IconMail,
                   label: "Email",
-                  value: "smartlabour@gmail.com",
+                  value: "contact.smartlabour@gmail.com",
                 },
                 {
                   icon: IconPhone,
                   label: "Téléphone",
-                  value: "+212 660 60 60 60",
+                  value: "+212 660 68 66 67",
                 },
                 {
                   icon: IconMapPin,
@@ -989,15 +989,15 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-3 sm:mb-4 text-xs sm:text-sm">Contact</h4>
               <ul className="space-y-2 text-gray-400 text-xs">
-                <li>info.smartlabour@gmail.com</li>
-                <li>+212 660 63 71 37</li>
-                <li>Casablanca, Maroc</li>
+                <li>contact.smartlabour@gmail.com</li>
+                <li>+212  660 68 66 67</li>
+                <li>17 place Charles Nicolle res Pasteur Build Etg 7 Apt 2, Casablanca, Maroc</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-700 pt-6 sm:pt-8 text-center text-gray-400 text-xs">
-            <p>© 2024 Smart Labour. Tous droits réservés.</p>
+            <p>© 2026 Smart Labour. Tous droits réservés.</p>
           </div>
         </div>
       </motion.footer>
