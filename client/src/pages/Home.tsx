@@ -317,13 +317,16 @@ export default function Home() {
                   whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 220, damping: 18 }}
                 >
-                  <div className="relative aspect-[16/11] sm:aspect-[4/3] lg:aspect-[16/11]">
+                  <div className="relative h-[340px] sm:h-[400px] md:h-[500px] lg:h-[500px] xl:h-[600px]">
                     <img
-                      src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=2000&q=75"
-                      alt="Ville et entreprises"
+                      src="/hero.jpg"
+                      alt="Négoce • Services • Construction • Recrutement"
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="eager"
                       decoding="async"
+                      onError={(e) => {
+                        e.currentTarget.src = "/logo%20smart%20labour.png";
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/45 via-[#003366]/10 to-transparent" />
 
